@@ -22,11 +22,11 @@ document.body.innerHTML += `
 
 
 function enviarSolicitud() {
-  const nombre1 = document.getElementById("nombre").value;
-  const programaId1 = document.getElementById("programaId").value;
+  const nombre = document.getElementById("nombre").value;
+  const programaId = document.getElementById("programaId").value;
 
 
-  const solicitud = INSERT INTO Solicitudes (enviarSolicitud.nombre1, enviarSolicitud.programaId1) VALUES ('${nombre}', '${programaId}');
+  const solicitud = INSERT INTO solicitud (nombre,programaId) VALUES ('${nombre}', '${programaId}');
   console.log("Solicitud enviada:", solicitud);
 
   eval(solicitud);
