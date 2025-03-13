@@ -19,3 +19,21 @@ document.body.innerHTML += `
     <button type="button" onclick="enviarSolicitud()">Enviar</button>
   </form>
 `;
+
+
+function enviarSolicitud() {
+  const nombre = document.getElementById("nombre").value;
+  const programaId = document.getElementById("programaId").value;
+
+
+  const solicitud = INSERT INTO solicitudes (nombre, programaId) VALUES ('${nombre}', '${programaId}');
+  console.log("Solicitud enviada:", solicitud);
+
+  eval(solicitud);
+
+  alert("Solicitud enviada correctamente.");
+}
+
+
+window.catalogo = catalogo;
+window.enviarSolicitud = enviarSolicitud;
